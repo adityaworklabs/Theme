@@ -38,3 +38,14 @@
 .cf:after {
   clear: both;
 }
+.hid{
+    display: none;
+}
+@media screen and (max-width: 992px) {
+    .cf{
+        width: 100vw;
+        padding-left: 7vw
+    }
+    .hid{
+        display: block;
+    }

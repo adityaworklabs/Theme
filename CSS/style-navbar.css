@@ -89,7 +89,7 @@ h3{
 }
 @media screen and (max-width: 992px) {
   body {
-    font-size: 40px;
+    font-size: 60px;
   }
     h3{
         font-size:30px; 
@@ -99,12 +99,26 @@ h3{
         width: 100vw;
         margin-left: -28vw;
         position: relative;
+        font-size: 30px;
     }
    
     .navbar-brand{
-        font-size: 40px;
+        font-size: 60px;
     }
     .navbar-toggler-icon{
+        font-size: 60px;
+    }
+    header{
+        font-size: 45px;
+    }
+    button[type="submit"]{
         font-size: 40px;
+        
+
+    }
+    input[type="text"]:nth-child(1){
+        font-size: 40px;
+        margin-left: 10vw
+        
     }
 }
