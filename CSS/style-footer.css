@@ -146,7 +146,7 @@ p {
         margin-right: 50vw;
     }
     ::placeholder {
-  
+  margin-bottom: -10px;
   font-size: 40px;
 }
     input{
