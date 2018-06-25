@@ -69,6 +69,7 @@ header{
 .mega{
     width: 50vw;
     position: absolute;
+    margin-right: 4vw;
 }
 .navbar{
     background: #343A40;
@@ -82,4 +83,16 @@ header{
 }
 .row{
     margin-left: 5px;
+}
+h3{
+    color: black;
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 28px;
+  }
+    h3{
+        font-size:30px; 
+        font-weight: 1000;
+    }
 }

@@ -130,5 +130,8 @@ p {
         visibility: visible;
     }
 }
-
+@media screen and (max-width: 992px) {
+  #fc{
+      margin-left: -23vw;
+      font-size: 32px;
  
