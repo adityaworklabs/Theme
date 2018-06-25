@@ -131,7 +131,17 @@ p {
     }
 }
 @media screen and (max-width: 992px) {
-  #fc{
-      margin-left: -23vw;
-      font-size: 60px;
+  
+    p{
+        font-size: 40px;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .det{
+        font-size: 40px;
+    }
+    .column{
+        margin-right: 50vw;
     }
