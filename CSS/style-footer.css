@@ -146,13 +146,19 @@ p {
         margin-right: 50vw;
     }
     ::placeholder {
-  margin-bottom: -10px;
-  font-size: 40px;
+  
+  font-size: 30px;
+        
 }
     input{
-        padding: 60px;
-    }
-    input {
         font-size: 40px;
     }
-    
+    .fa{
+        font-size: 50px;
+        padding-right: 30px;
+        padding-left: 25px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+       
+    }
+   

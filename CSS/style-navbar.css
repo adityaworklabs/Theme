@@ -100,4 +100,13 @@ h3{
         margin-left: -28vw;
         position: relative;
     }
+     nav{
+        height: 100px
+    }
+    .navbar-brand{
+        font-size: 40px;
+    }
+    .navbar-toggler-icon{
+        font-size: 40px;
+    }
 }
