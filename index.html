@@ -14,8 +14,13 @@
 <link rel="stylesheet" href="CSS/style-footer.css">
 <link rel="stylesheet" href="CSS/style-homepage.css">
 <link rel="stylesheet" href="CSS/style-navbar.css">
+<link rel="stylesheet" href="CSS/style-parallax.css">
+<link rel="stylesheet" href="CSS/style-progressBar.css">
 </head>
 <body>
+ <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
   <header> <div>
     <span>
         <i class="fas fa-map-marker-alt grey" style="margin-left: 3vw; margin-right: 1vw"></i><a href="#" class="head1">123 street xyz,zyxz</a>
@@ -105,6 +110,12 @@
     </form>
   </div>
 </nav>
+    <div class="cont" style="z-index: -2000000;">
+  <section>
+    <div class="aditya-image" data-type="aditya-background" data-speed="2"></div>
+    <div class="aditya-stuff" data-type="aditya-content"><h2>Reoptimized</h2></div>
+  </section>
+  </div>
      
 <button class="btn b1"><i class="fas fa-angle-up size"><a href="#top"></a></i></button>
 
@@ -180,7 +191,63 @@
          <button class="btn b1"><i class="fas fa-angle-up size"><a href="#top"></a></i></button>
         
 <script>
+ // makes the parallax elements
+function parallaxIt() {
 
+  // create variables
+  var $fwindow = $(window);
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // on window scroll event
+  $fwindow.on('scroll resize', function() {
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  }); 
+
+  // for each of content parallax element
+  $('[data-type="aditya-content"]').each(function (index, e) {
+    var $contentObj = $(this);
+    var fgOffset = parseInt($contentObj.offset().top);
+    var yPos;
+    var speed = ($contentObj.data('speed') || 1 );
+
+    $fwindow.on('scroll resize', function (){
+      yPos = fgOffset - scrollTop / speed; 
+
+      $contentObj.css('top', yPos);
+    });
+  });
+
+  // for each of background parallax element
+  $('[data-type="aditya-background"]').each(function(){
+    var $backgroundObj = $(this);
+    var bgOffset = parseInt($backgroundObj.offset().top);
+    var yPos;
+    var coords;
+    var speed = ($backgroundObj.data('speed') || 0 );
+
+    $fwindow.on('scroll resize', function() {
+      yPos = - ((scrollTop - bgOffset) / speed); 
+      coords = '50% '+ yPos + 'px';
+
+      $backgroundObj.css({ backgroundPosition: coords });
+    }); 
+  }); 
+
+  // triggers winodw scroll for refresh
+  $fwindow.trigger('scroll');
+};
+
+parallaxIt();
+    window.onload = function(){ document.getElementById("loading").style.display = "none" }
+    // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 </script>
 </body>
 </html>
