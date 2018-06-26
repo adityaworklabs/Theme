@@ -87,6 +87,7 @@ header{
 h3{
     color: black;
 }
+.fa-angle-down{font-size: 11px;}
 @media screen and (max-width: 992px) {
   body {
     font-size: 60px;
@@ -121,4 +122,5 @@ h3{
         margin-left: 5vw;
         
     }
+    .fa-angle-down{font-size: 60px;}
 }
